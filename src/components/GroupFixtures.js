@@ -67,7 +67,8 @@ const styles = {
   }
 };
 
-const GroupFixtures = ({ groupMatches, teams, stadiums, checkedFixtures, checkedResults, onMatchCategoryChange, classes }) => {
+const options = { groupMatches, teams, stadiums, checkedFixtures, checkedResults, onMatchCategoryChange, classes };
+const GroupFixtures = (options) => {
   groupMatches = groupMatches.sort((a, b) => {
     return new Date(a.date) - new Date(b.date);
   });
